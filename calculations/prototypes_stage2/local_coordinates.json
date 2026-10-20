@@ -1,0 +1,109 @@
+{
+  "indexing": "zero-based",
+  "coordinate_type": "unsigned interatomic distance with orientation +1",
+  "systems": {
+    "water_dimer": {
+      "atom_roles": {
+        "0": "donor_O",
+        "1": "donor_spectator_H",
+        "2": "donor_bridge_H",
+        "3": "acceptor_O",
+        "4": "acceptor_H_a",
+        "5": "acceptor_H_b"
+      },
+      "coordinates": {
+        "donor_OH": [0, 2],
+        "hydrogen_bond_HO": [2, 3],
+        "donor_acceptor_OO": [0, 3],
+        "donor_spectator_OH": [0, 1],
+        "acceptor_OH_a": [3, 4],
+        "acceptor_OH_b": [3, 5]
+      },
+      "primary_cross_pairs": [
+        ["donor_OH", "hydrogen_bond_HO"],
+        ["donor_OH", "donor_acceptor_OO"],
+        ["hydrogen_bond_HO", "donor_acceptor_OO"]
+      ],
+      "internal_controls": [
+        ["donor_spectator_OH", "hydrogen_bond_HO"],
+        ["acceptor_OH_a", "hydrogen_bond_HO"],
+        ["acceptor_OH_b", "hydrogen_bond_HO"]
+      ]
+    },
+    "methane_dimer": {
+      "atom_roles": {
+        "0": "C_A",
+        "1": "H_A_in_1",
+        "2": "H_A_in_2",
+        "3": "H_A_in_3",
+        "4": "H_A_out",
+        "5": "C_B",
+        "6": "H_B_out",
+        "7": "H_B_in_1",
+        "8": "H_B_in_2",
+        "9": "H_B_in_3"
+      },
+      "coordinates": {
+        "CC": [0, 5],
+        "CH_A_in_1": [0, 1],
+        "CH_A_in_2": [0, 2],
+        "CH_A_in_3": [0, 3],
+        "CH_A_out": [0, 4],
+        "CH_B_out": [5, 6],
+        "CH_B_in_1": [5, 7],
+        "CH_B_in_2": [5, 8],
+        "CH_B_in_3": [5, 9],
+        "HH_A1_B1": [1, 7],
+        "HH_A1_B3": [1, 9],
+        "HH_A2_B2": [2, 8],
+        "HH_A2_B3": [2, 9],
+        "HH_A3_B1": [3, 7],
+        "HH_A3_B2": [3, 8]
+      },
+      "equivalent_coordinate_groups": [
+        ["CH_A_in_1", "CH_A_in_2", "CH_A_in_3"],
+        ["CH_B_in_1", "CH_B_in_2", "CH_B_in_3"],
+        ["HH_A1_B1", "HH_A1_B3", "HH_A2_B2", "HH_A2_B3", "HH_A3_B1", "HH_A3_B2"]
+      ],
+      "contact_incidence_triplets": [
+        ["HH_A1_B1", "CH_A_in_1", "CH_B_in_1"],
+        ["HH_A1_B3", "CH_A_in_1", "CH_B_in_3"],
+        ["HH_A2_B2", "CH_A_in_2", "CH_B_in_2"],
+        ["HH_A2_B3", "CH_A_in_2", "CH_B_in_3"],
+        ["HH_A3_B1", "CH_A_in_3", "CH_B_in_1"],
+        ["HH_A3_B2", "CH_A_in_3", "CH_B_in_2"]
+      ],
+      "primary_cross_pairs": [
+        ["CH_A_in_1", "HH_A1_B1"],
+        ["CH_B_in_1", "HH_A1_B1"],
+        ["CH_A_in_1", "CH_B_in_1"],
+        ["CC", "HH_A1_B1"]
+      ],
+      "internal_controls": [
+        ["CH_A_out", "HH_A1_B1"],
+        ["CH_B_out", "HH_A1_B1"]
+      ]
+    },
+    "fhf_minus": {
+      "atom_roles": {
+        "0": "F_left",
+        "1": "H_shared",
+        "2": "F_right"
+      },
+      "coordinates": {
+        "FH_left": [0, 1],
+        "HF_right": [1, 2],
+        "FF": [0, 2]
+      },
+      "primary_cross_pairs": [
+        ["FH_left", "HF_right"],
+        ["FH_left", "FF"],
+        ["HF_right", "FF"]
+      ],
+      "mass_only_followup": {
+        "isotopologue": "FDF-",
+        "rule": "reuse the same electronic Hessian and geometry; replace only the central mass for the isotope analysis"
+      }
+    }
+  }
+}

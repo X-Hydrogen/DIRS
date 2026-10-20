@@ -1,0 +1,59 @@
+name: DIRS paper reproducibility
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "analysis/**"
+      - "scripts/**"
+      - "tests/**"
+      - "calculations/**"
+      - "reference/**"
+      - "pyproject.toml"
+      - "requirements-reproduction.txt"
+      - ".github/workflows/reproduce-paper.yml"
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-reproduction.txt
+      - name: Install pinned scientific runtime
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-reproduction.txt
+          python -m pip install --no-deps -e .
+      - name: Test implementation and independent paper reproduction
+        run: python -m pytest -q
+      - name: Recalculate published values from source Hessians
+        run: python scripts/reproduce_publication.py --verify-raw
+      - name: Implementation-independent recomputation from raw ORCA .hess
+        run: python scripts/independent_check.py
+      - name: Non-invasive HCN near-linearity sensitivity audit
+        run: python scripts/hcn_rank_sensitivity.py
+      - name: Archive numerical reproduction proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dirs-paper-reproduction
+          path: |
+            reproduced/reproduction_report.json
+            reproduced/primary_37_recomputed.csv
+            reproduced/water_hexamer_6_recomputed.csv
+            reproduced/functional_controls_recomputed.csv
+            reproduced/independent_check/
+            reproduced/hcn_rank_sensitivity.json
+          if-no-files-found: warn
+          retention-days: 30

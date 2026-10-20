@@ -1,0 +1,172 @@
+{
+  "all_numerical_pass": true,
+  "all_qualitative_pass": true,
+  "all_quantitative_pass": true,
+  "classification": "QUANTITATIVELY_ROBUST",
+  "frozen_design": "theory/stage3b_method_robustness_design_r1.md",
+  "max_abs_delta_eta": 0.026915911358005418,
+  "max_abs_delta_kappa": 0.12883378544519147,
+  "noncancellation_endpoint_count": 18,
+  "numerical_admissibility": {
+    "ammonia_borane": true,
+    "chloride_water": true,
+    "fhf_minus": true,
+    "methane_dimer": true,
+    "water_dimer": true
+  },
+  "qualitative_gates": {
+    "ammonia_borane": true,
+    "chloride_water": true,
+    "fhf_minus": true,
+    "methane_dimer": true,
+    "water_dimer": true
+  },
+  "quantitative_gates": {
+    "max_abs_delta_eta_le_0p15": true,
+    "max_abs_delta_kappa_le_0p20": true,
+    "spearman_ge_0p80": true
+  },
+  "raw_corrected_noncancellation_sign_reversals": [],
+  "spearman_signed_eta": 0.9484004127966976,
+  "systems": {
+    "ammonia_borane": {
+      "coordinate_lengths_angstrom": {
+        "BH1": 1.2128602726294397,
+        "BH2": 1.2128605537078445,
+        "BH3": 1.2128602806184008,
+        "HN1_HB1": 2.5679085419348775,
+        "HN1_HB2": 3.1507660511399513,
+        "HN1_HB3": 2.567908903294923,
+        "HN2_HB1": 2.5679068791779693,
+        "HN2_HB2": 2.567907581602031,
+        "HN2_HB3": 3.1507654783570436,
+        "HN3_HB1": 3.150765436105925,
+        "HN3_HB2": 2.5679078667690862,
+        "HN3_HB3": 2.5679069990626697,
+        "NB": 1.6581701800905366,
+        "NH1": 1.0141262431094864,
+        "NH2": 1.014125982015836,
+        "NH3": 1.014126018711442
+      },
+      "direct_modal_max_relative": 6.952900099994052e-15,
+      "eta_max_excess": 0.0,
+      "invariance": {
+        "correction_frobenius": 7.918130464630135e-05,
+        "correction_max_abs_hartree_per_bohr2": 2.0312724128723758e-05,
+        "correction_relative_frobenius": 4.077757057251903e-05,
+        "geometric_is_linear": false,
+        "geometric_rigid_rank": 6,
+        "raw_rigid_block_norm": 2.0420630249891377e-05,
+        "raw_rigid_vibrational_coupling_norm": 5.409564153284661e-05
+      },
+      "minimum_frequency_cm_minus1": 251.0385402584478,
+      "reciprocity_max_abs": 1.4210854715202004e-14,
+      "stationary_minimum_pass": true,
+      "status": "COMPUTED"
+    },
+    "chloride_water": {
+      "coordinate_lengths_angstrom": {
+        "donor_OH": 0.9861369471511565,
+        "donor_acceptor_OCl": 3.1137802758931987,
+        "hydrogen_bond_HCl": 2.146304910526328,
+        "spectator_OH": 0.9584459018301279
+      },
+      "direct_modal_max_relative": 4.084262520516758e-14,
+      "eta_max_excess": 0.0,
+      "invariance": {
+        "correction_frobenius": 0.0010345139438742766,
+        "correction_max_abs_hartree_per_bohr2": 0.0006675492614615609,
+        "correction_relative_frobenius": 0.0007312387640625842,
+        "geometric_is_linear": false,
+        "geometric_rigid_rank": 6,
+        "raw_rigid_block_norm": 0.0008725721421433144,
+        "raw_rigid_vibrational_coupling_norm": 0.0003929611665455853
+      },
+      "minimum_frequency_cm_minus1": 198.96497892289574,
+      "reciprocity_max_abs": 2.7755575615628914e-17,
+      "stationary_minimum_pass": true,
+      "status": "COMPUTED"
+    },
+    "fhf_minus": {
+      "coordinate_lengths_angstrom": {
+        "FF": 2.291997059151976,
+        "FH_left": 1.1459985370961252,
+        "HF_right": 1.1459985220558508
+      },
+      "direct_modal_max_relative": 7.777962871350893e-16,
+      "eta_max_excess": 0.0,
+      "invariance": {
+        "correction_frobenius": 0.00019881011374430692,
+        "correction_max_abs_hartree_per_bohr2": 9.577418559952519e-05,
+        "correction_relative_frobenius": 0.0006045436709680759,
+        "geometric_is_linear": true,
+        "geometric_rigid_rank": 5,
+        "raw_rigid_block_norm": 0.00017366054694924212,
+        "raw_rigid_vibrational_coupling_norm": 6.843783953455896e-05
+      },
+      "minimum_frequency_cm_minus1": 630.7804308583381,
+      "reciprocity_max_abs": 1.7763568394002505e-15,
+      "stationary_minimum_pass": true,
+      "status": "COMPUTED"
+    },
+    "methane_dimer": {
+      "coordinate_lengths_angstrom": {
+        "CC": 3.6327041285144976,
+        "CH_A_in_1": 1.0898569012979908,
+        "CH_A_in_2": 1.0898569051170912,
+        "CH_A_in_3": 1.089856112611716,
+        "CH_A_out": 1.0899549189554325,
+        "CH_B_in_1": 1.0898569360337107,
+        "CH_B_in_2": 1.0898569062696908,
+        "CH_B_in_3": 1.0898561228022108,
+        "CH_B_out": 1.0899549677222686,
+        "HH_A1_B1": 3.079999412043148,
+        "HH_A1_B3": 3.079196443641179,
+        "HH_A2_B2": 3.0800055100642716,
+        "HH_A2_B3": 3.079204050826182,
+        "HH_A3_B1": 3.0791856520136647,
+        "HH_A3_B2": 3.079176723339259
+      },
+      "direct_modal_max_relative": 1.392336607223978e-12,
+      "eta_max_excess": 0.0,
+      "invariance": {
+        "correction_frobenius": 6.539907839765107e-05,
+        "correction_max_abs_hartree_per_bohr2": 1.1091254523116246e-05,
+        "correction_relative_frobenius": 3.03733889468015e-05,
+        "geometric_is_linear": false,
+        "geometric_rigid_rank": 6,
+        "raw_rigid_block_norm": 1.5370304794241624e-05,
+        "raw_rigid_vibrational_coupling_norm": 4.494882192999961e-05
+      },
+      "minimum_frequency_cm_minus1": 42.0186248120692,
+      "reciprocity_max_abs": 2.8421709430404007e-13,
+      "stationary_minimum_pass": true,
+      "status": "COMPUTED"
+    },
+    "water_dimer": {
+      "coordinate_lengths_angstrom": {
+        "acceptor_OH_a": 0.9601418097048636,
+        "acceptor_OH_b": 0.960141831598443,
+        "donor_OH": 0.9663202683892947,
+        "donor_acceptor_OO": 2.92906042249295,
+        "donor_spectator_OH": 0.9584193638166957,
+        "hydrogen_bond_HO": 1.9701600219861246
+      },
+      "direct_modal_max_relative": 2.215416081662219e-14,
+      "eta_max_excess": 0.0,
+      "invariance": {
+        "correction_frobenius": 0.0001614442099510233,
+        "correction_max_abs_hartree_per_bohr2": 5.294919981613244e-05,
+        "correction_relative_frobenius": 7.340842056156677e-05,
+        "geometric_is_linear": false,
+        "geometric_rigid_rank": 6,
+        "raw_rigid_block_norm": 5.26866325767991e-05,
+        "raw_rigid_vibrational_coupling_norm": 0.00010790818243863086
+      },
+      "minimum_frequency_cm_minus1": 128.87729479263194,
+      "reciprocity_max_abs": 5.551115123125783e-17,
+      "stationary_minimum_pass": true,
+      "status": "COMPUTED"
+    }
+  }
+}

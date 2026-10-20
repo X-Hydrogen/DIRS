@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dirs-response"
+version = "0.1.0"
+description = "Dynamic interaction response spectra and reproducible molecular compliance analysis"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Hengyue Xu" }]
+license = {file = "LICENSE"}
+dependencies = ["numpy>=2.0,<3", "scipy>=1.11,<2", "matplotlib>=3.8,<4"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0,<10", "pytest-cov>=5.0,<7"]
+dev = ["ruff>=0.6", "mypy>=1.11"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dirs"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]

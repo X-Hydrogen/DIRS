@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the versioned DIRS software release and associated article when available."
+title: "DIRS: Dynamic Interaction Response Spectra"
+type: software
+authors:
+  - family-names: Xu
+    given-names: Hengyue
+repository-code: "https://github.com/X-Hydrogen/DIRS"
+license: MIT
+version: 0.1.0
+keywords:
+  - vibrational response
+  - compliance coupling constants
+  - molecular Hessian

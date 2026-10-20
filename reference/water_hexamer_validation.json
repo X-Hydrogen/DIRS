@@ -1,0 +1,50 @@
+{
+  "system": "water_hexamer_book",
+  "job": "water_hexamer_book_pbe0d4",
+  "execution_input_sha256": "49565b029182a4a271578cd063a0a8eda35a8f3b1bb1fb2dd0e87d77fed51a8a",
+  "n_atoms": 18,
+  "rigid_rank": 6,
+  "n_vibrational_modes": 48,
+  "lowest_projected_frequency_cm_minus1": 29.785779267230357,
+  "highest_projected_frequency_cm_minus1": 3936.097728968353,
+  "projected_positive_definite": true,
+  "raw_hessian_rigid_block_norm": 6.430827456202948e-05,
+  "raw_hessian_rigid_vibrational_coupling_norm": 0.00017718454962753523,
+  "rigid_invariance_correction_max_abs_hartree_per_bohr2": 4.29674164007382e-05,
+  "rigid_invariance_correction_relative_frobenius": 7.36564310116361e-05,
+  "max_direct_modal_relative_error": 1.0940497394185972e-12,
+  "max_reciprocity_absolute_error": 2.2293278334473143e-13,
+  "max_abs_eta": 0.9612418289343921,
+  "endpoint_count": 6,
+  "raw_orca_frequency_context": {
+    "available": true,
+    "raw_first_frequencies_cm_minus1": [
+      -15.48,
+      -10.11,
+      -5.05,
+      4.98,
+      9.02,
+      10.12,
+      30.11,
+      41.06,
+      58.89,
+      75.55,
+      95.22,
+      151.88
+    ],
+    "raw_negative_frequency_count_in_first_12": 3,
+    "note": "ORCA raw Hessian output explicitly states that translations/rotations were not projected; stationary-point acceptance uses the frozen rigid-projected convention.",
+    "optimization_last_cycle": 73,
+    "final_single_point_energy_hartree": -458.380079985482,
+    "normal_termination": true,
+    "optimization_converged": true
+  },
+  "gates": {
+    "projected_stationary_minimum": true,
+    "direct_modal_closure": true,
+    "reciprocity": true,
+    "eta_bound": true,
+    "preregistered_endpoint_count": true
+  },
+  "all_gates_pass": true
+}

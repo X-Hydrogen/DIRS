@@ -1,0 +1,22 @@
+! WB97X-D4 def2-TZVPPD VeryTightSCF VeryTightOpt Freq DEFGRID3 NoSym
+
+%pal
+  nprocs 8
+end
+
+%maxcore 3500
+
+%geom
+  MaxIter 300
+end
+
+%freq
+  TransInvar false
+  ProjectTR false
+end
+
+* xyz -1 1
+F  -1.141906104084 -0.000000000103 -0.000000003813
+H   0.000000001655  0.000000000205  0.000000007626
+F   1.141906102429 -0.000000000103 -0.000000003813
+*

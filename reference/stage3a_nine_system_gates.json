@@ -1,0 +1,37 @@
+{
+  "acceptance_decision": "theory/stage3a_acceptance_decision_r2.md",
+  "accepted_system_count": 9,
+  "excluded_from_static_inversion": [
+    "benzene_methane",
+    "fluorobenzene_fluoroform"
+  ],
+  "overall_numerical_pass": true,
+  "protocol": "theory/stage3a_numerical_r2_protocol.md",
+  "retained_non_spectral_gates": {
+    "all_stationary": true,
+    "direct_modal": true,
+    "eta_bound": true,
+    "isotope_static_invariance": true,
+    "reciprocity": true
+  },
+  "scientific_review_flags": {
+    "note": "Any raw-versus-regularized sign reversal is reported for curator review and is not silently thresholded away.",
+    "raw_regularized_primary_sign_reversal_count": 0
+  },
+  "spectral_r2": {
+    "maximum_finest_sum_error": 4.514300339675259e-05,
+    "maximum_middle_to_finest_refinement_difference": 1.842770186444298e-09,
+    "refinement_pass": true,
+    "refinement_tolerance": 5e-05,
+    "sum_pass": true,
+    "sum_tolerance": 0.0002
+  },
+  "evidence_origin": {
+    "runner": "dirs-server",
+    "machine": "cerium",
+    "preserved_workspace_head": "d696efa50a15613096d26cbb92cbeadf38404b7b",
+    "workflow_run": 31577387676,
+    "workflow_branch_commit": "167acef03c69c30067719e140957ce8dd274745b",
+    "note": "The analysis was rerun on the preserved self-hosted workspace without a network checkout because github.com TLS/443 connectivity from cerium was intermittent. Scientific inputs and numerical tolerances were unchanged."
+  }
+}

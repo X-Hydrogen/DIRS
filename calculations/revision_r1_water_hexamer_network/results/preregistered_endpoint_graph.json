@@ -1,0 +1,269 @@
+{
+  "source_xyz": "calculations/revision_r1_water_hexamer_network/results/water_hexamer_book_pbe0d4.xyz",
+  "thresholds": {
+    "H_acceptor_max_A": 2.5,
+    "O_H_acceptor_min_angle_deg": 140
+  },
+  "water_assignment": {
+    "W1": {
+      "O": 1,
+      "H": [
+        2,
+        3
+      ]
+    },
+    "W2": {
+      "O": 4,
+      "H": [
+        5,
+        6
+      ]
+    },
+    "W3": {
+      "O": 7,
+      "H": [
+        8,
+        9
+      ]
+    },
+    "W4": {
+      "O": 10,
+      "H": [
+        11,
+        12
+      ]
+    },
+    "W5": {
+      "O": 13,
+      "H": [
+        14,
+        15
+      ]
+    },
+    "W6": {
+      "O": 16,
+      "H": [
+        17,
+        18
+      ]
+    }
+  },
+  "contacts": [
+    {
+      "donor_O": 1,
+      "donor_H": 3,
+      "acceptor_O": 4,
+      "donor_water": 1,
+      "acceptor_water": 2,
+      "H_acceptor_distance_A": 1.6800247009152844,
+      "O_H_acceptor_angle_deg": 168.50215946575008,
+      "O_O_distance_A": 2.6576122439446066,
+      "contact_id": "HB1"
+    },
+    {
+      "donor_O": 4,
+      "donor_H": 5,
+      "acceptor_O": 7,
+      "donor_water": 2,
+      "acceptor_water": 3,
+      "H_acceptor_distance_A": 1.8036361238364964,
+      "O_H_acceptor_angle_deg": 166.83001012382633,
+      "O_O_distance_A": 2.7637049690503375,
+      "contact_id": "HB2"
+    },
+    {
+      "donor_O": 4,
+      "donor_H": 6,
+      "acceptor_O": 16,
+      "donor_water": 2,
+      "acceptor_water": 6,
+      "H_acceptor_distance_A": 1.9856612914838927,
+      "O_H_acceptor_angle_deg": 158.96088324026798,
+      "O_O_distance_A": 2.9088654484171803,
+      "contact_id": "HB3"
+    },
+    {
+      "donor_O": 7,
+      "donor_H": 9,
+      "acceptor_O": 10,
+      "donor_water": 3,
+      "acceptor_water": 4,
+      "H_acceptor_distance_A": 1.7762569397889432,
+      "O_H_acceptor_angle_deg": 168.34276852323987,
+      "O_O_distance_A": 2.7411664545757555,
+      "contact_id": "HB4"
+    },
+    {
+      "donor_O": 10,
+      "donor_H": 11,
+      "acceptor_O": 16,
+      "donor_water": 4,
+      "acceptor_water": 6,
+      "H_acceptor_distance_A": 1.7817312154122742,
+      "O_H_acceptor_angle_deg": 169.7967404709269,
+      "O_O_distance_A": 2.74834456665318,
+      "contact_id": "HB5"
+    },
+    {
+      "donor_O": 13,
+      "donor_H": 14,
+      "acceptor_O": 1,
+      "donor_water": 5,
+      "acceptor_water": 1,
+      "H_acceptor_distance_A": 1.6780169246789183,
+      "O_H_acceptor_angle_deg": 169.05876465134244,
+      "O_O_distance_A": 2.655976256176242,
+      "contact_id": "HB6"
+    },
+    {
+      "donor_O": 16,
+      "donor_H": 18,
+      "acceptor_O": 13,
+      "donor_water": 6,
+      "acceptor_water": 5,
+      "H_acceptor_distance_A": 1.6656722825603159,
+      "O_H_acceptor_angle_deg": 171.3134035182386,
+      "O_O_distance_A": 2.649181077750889,
+      "contact_id": "HB7"
+    }
+  ],
+  "endpoints": [
+    {
+      "endpoint_id": "E1",
+      "class": "local_contact_heavy_atom",
+      "coord_A": {
+        "type": "distance",
+        "atoms": [
+          3,
+          4
+        ]
+      },
+      "coord_B": {
+        "type": "distance",
+        "atoms": [
+          1,
+          4
+        ]
+      },
+      "contacts": [
+        "HB1"
+      ]
+    },
+    {
+      "endpoint_id": "E2",
+      "class": "local_contact_heavy_atom",
+      "coord_A": {
+        "type": "distance",
+        "atoms": [
+          5,
+          7
+        ]
+      },
+      "coord_B": {
+        "type": "distance",
+        "atoms": [
+          4,
+          7
+        ]
+      },
+      "contacts": [
+        "HB2"
+      ]
+    },
+    {
+      "endpoint_id": "E3",
+      "class": "adjacent_network_contacts",
+      "coord_A": {
+        "type": "distance",
+        "atoms": [
+          3,
+          4
+        ]
+      },
+      "coord_B": {
+        "type": "distance",
+        "atoms": [
+          5,
+          7
+        ]
+      },
+      "contacts": [
+        "HB1",
+        "HB2"
+      ]
+    },
+    {
+      "endpoint_id": "E4",
+      "class": "adjacent_network_contacts",
+      "coord_A": {
+        "type": "distance",
+        "atoms": [
+          3,
+          4
+        ]
+      },
+      "coord_B": {
+        "type": "distance",
+        "atoms": [
+          6,
+          16
+        ]
+      },
+      "contacts": [
+        "HB1",
+        "HB3"
+      ]
+    },
+    {
+      "endpoint_id": "E5",
+      "class": "nonlocal_network_contacts",
+      "line_graph_edge_distance": 2,
+      "coord_A": {
+        "type": "distance",
+        "atoms": [
+          3,
+          4
+        ]
+      },
+      "coord_B": {
+        "type": "distance",
+        "atoms": [
+          9,
+          10
+        ]
+      },
+      "contacts": [
+        "HB1",
+        "HB4"
+      ]
+    },
+    {
+      "endpoint_id": "E6",
+      "class": "nonlocal_network_contacts",
+      "line_graph_edge_distance": 2,
+      "coord_A": {
+        "type": "distance",
+        "atoms": [
+          3,
+          4
+        ]
+      },
+      "coord_B": {
+        "type": "distance",
+        "atoms": [
+          11,
+          16
+        ]
+      },
+      "contacts": [
+        "HB1",
+        "HB5"
+      ]
+    }
+  ],
+  "endpoint_class_counts": {
+    "local_contact_heavy_atom": 2,
+    "adjacent_network_contacts": 2,
+    "nonlocal_network_contacts": 2
+  }
+}

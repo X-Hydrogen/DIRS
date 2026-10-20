@@ -1,0 +1,27 @@
+! PBE0 D4 def2-TZVPPD VeryTightSCF VeryTightOpt Freq DEFGRID3 NoSym
+
+%pal
+  nprocs 8
+end
+
+%maxcore 4000
+
+%scf
+  MaxIter 300
+end
+
+%geom
+  MaxIter 300
+end
+
+%freq
+  TransInvar false
+  ProjectTR false
+end
+
+* xyz -1 1
+Cl  0.000000000  0.000000000  0.000000000
+H   2.090000000  0.000000000  0.000000000
+O   3.050000000  0.000000000  0.000000000
+H   3.290000000  0.929000000  0.000000000
+*
