@@ -57,3 +57,33 @@ jobs:
             reproduced/hcn_rank_sensitivity.json
           if-no-files-found: warn
           retention-days: 30
+
+  release:
+    name: Publish versioned software release
+    needs: reproduce
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Publish tag and release for the package version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          version="$(python3 -c 'import pathlib, tomllib; print(tomllib.loads(pathlib.Path("pyproject.toml").read_text())["project"]["version"])')"
+          tag="v$version"
+          git fetch origin main
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
+            echo "A newer main commit exists; release the latest revision instead."
+            exit 0
+          fi
+          if gh release view "$tag" >/dev/null 2>&1; then
+            echo "$tag already exists; leaving the published version unchanged."
+            exit 0
+          fi
+          gh release create "$tag" --target "$GITHUB_SHA" \
+            --title "DIRS $tag" \
+            --notes "DIRS source code, optimized-geometry Hessians, input files, coordinate definitions, and numerical verification tools for the accompanying JPCL manuscript. Run the instructions in README.md to reproduce the reported compliance constants and response descriptors."
